@@ -20,7 +20,7 @@
 - Step 2. Add the dependency：
 ```
   dependencies {
-	   implementation 'com.github.BartonL:IPManagerUtils:v1.0.8'
+	   implementation 'com.github.BartonL:IPManagerUtils:v1.1.0'
 	}
 ```
 ------
