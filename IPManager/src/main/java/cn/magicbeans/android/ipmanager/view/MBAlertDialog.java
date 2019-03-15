@@ -1,6 +1,5 @@
 package cn.magicbeans.android.ipmanager.view;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ public class MBAlertDialog extends Dialog implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alert_layout);
+        setContentView(R.layout.alert_mb_layout);
         numView = (TextView) findViewById(R.id.title);
         findViewById(R.id.submit).setOnClickListener(this);
         findViewById(R.id.cancel).setOnClickListener(this);

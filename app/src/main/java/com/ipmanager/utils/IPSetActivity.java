@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import cn.magicbeans.android.ipmanager.module.MBIPInfo;
 import cn.magicbeans.android.ipmanager.ui.MBIPActivity;
-import cn.magicbeans.android.ipmanager.utils.FloatWindowUtils;
+import cn.magicbeans.android.ipmanager.utils.MBFloatWindowUtils;
 import cn.magicbeans.android.ipmanager.utils.MBIPContant;
 import cn.magicbeans.android.ipmanager.utils.MBIPUtils;
 import cn.magicbeans.android.ipmanager.utils.MBShakeUtils;
@@ -18,6 +18,12 @@ import cn.magicbeans.android.ipmanager.utils.MBShakeUtils;
 public class IPSetActivity extends Activity {
 
     private TextView ipView;
+
+    private static String defaultIP = "192.168.1.111";
+
+    private static String defaultPort = "1111";
+
+    private static String defaultName = "陈雳的服务器";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +41,14 @@ public class IPSetActivity extends Activity {
         String ip = MBIPUtils.getInstance(this).getIPPort();
 
         if (TextUtils.isEmpty(ip)) {
-            ipView.setText("默认IP地址为空");
+            ipView.setText(defaultIP + ";" + defaultPort);
         } else {
             ipView.setText("默认IP地址:" + ip);
         }
 
 
-        FloatWindowUtils floatWindowUtils= new FloatWindowUtils();
-        floatWindowUtils.init(this);
+        MBFloatWindowUtils floatWindowUtils= new MBFloatWindowUtils();
+        floatWindowUtils.init(this, defaultIP, defaultPort, defaultName);
 
     }
 
@@ -76,7 +82,7 @@ public class IPSetActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        MBShakeUtils.getInstance(this).init();
+        MBShakeUtils.getInstance(this).init(defaultIP, defaultPort, defaultName);
 
     }
 

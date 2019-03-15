@@ -3,6 +3,10 @@
     package="cn.magicbeans.android.ipmanager">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -10,17 +14,20 @@
         <activity
             android:name=".ui.MBIPActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:theme="@style/activityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <activity
             android:name=".ui.MBIPEditActivity"
             android:configChanges="keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/activityTheme"/>
 
-        <activity android:name=".ui.MBDomainEditActivity"
+        <activity android:name=".ui.MBPhoneInfoActivity"
             android:configChanges="keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/activityTheme"/>
     </application>
 
 </manifest>

@@ -34,7 +34,7 @@
 - 项目参考于https://github.com/Rickwan/IPManagerUtils, 感谢作者！
 
 - 使用摇一摇触发IP设置功能：
-在需要修改IP的activity的onStart()方法中注册、在onStop()方法中取消注册。
+在需要修改IP的activity的onStart()方法中注册并传出默认IP及名称、在onStop()方法中取消注册。
 ```
 MBShakeUtils shakeUtils;
 
@@ -42,7 +42,7 @@ MBShakeUtils shakeUtils;
     protected void onStart() {
         super.onStart();
 	      shakeUtils = new MBShakeUtils(this);
-	      shakeUtils.init();	
+	      shakeUtils.init(defaultIP, defaultPort, defaultName);
     }
 
     @Override
@@ -52,6 +52,11 @@ MBShakeUtils shakeUtils;
     }
 
 ```
+- 使用按钮触发IP设置功能：
+在onCreate方法中注册按钮模式并传入默认IP及名称：
+
+        MBFloatWindowUtils floatWindowUtils= new MBFloatWindowUtils();
+        floatWindowUtils.init(this, defaultIP, defaultPort, defaultName);
 
 - 设置IP：  
  
@@ -70,8 +75,14 @@ startActivityForResult(intent, MBIPContant.REQUEST_CODE);
 
         if (resultCode == MBIPContant.RESULT_CODE) {
 
-            MBIPInfo info = (MBIPInfo) data.getSerializableExtra(MBIPContant.IP);
-            ipView.setText("新IP地址：" + info.ip + ":" + info.port);
+        MBIPInfo info = (MBIPInfo) data.getSerializableExtra(MBIPContant.IP);
+
+            if (!info.getPort().equals("*")) {//当IP设置为域名是端口号为非必传，默认为*
+                ipView.setText("新IP地址：" + info.ip + ":" + info.port);
+            }else {
+                ipView.setText("新IP地址：" + info.ip);
+            }
+
         }
     }
  ```

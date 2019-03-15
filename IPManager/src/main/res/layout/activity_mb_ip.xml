@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mb_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:id="@+id/mb_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mb_finish"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/mb_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/mb_sub_gray"
+                android:text="@string/mb_current_ip"/>
+
+            <TextView
+                android:id="@+id/mb_phone_info_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@mipmap/mb_next"
+                android:gravity="center_vertical"
+                android:drawablePadding="8dp"
+                android:layout_marginRight="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/mb_999999"
+                android:text="@string/mb_see_native_information"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/mb_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/mb_default_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/mb_gray"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/mb_default_ip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/mb_blue"
+                    android:text=""/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/mb_sub_gray"
+                android:text="@string/mb_available_ips"/>
+
+           <ImageView
+               android:id="@+id/mb_add_ip_ImageView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:src="@mipmap/mb_add"
+               android:padding="5dp"
+               android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+
+        <cn.magicbeans.android.ipmanager.utils.swipe.MBSwipeMenuRecyclerView
+            android:id="@+id/mb_ip_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mb_white"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -18,6 +18,11 @@ public class MBIPInfo implements Serializable{
     public String port;
 
     /**
+     * 名称
+     */
+    public String name;
+
+    /**
      * 默认IP 0 false ，1 true
      */
     public int isDefeault;
@@ -33,6 +38,21 @@ public class MBIPInfo implements Serializable{
         this.ip = ip;
         this.port = port;
         this.isDefeault= isDefeault;
+    }
+
+    public MBIPInfo(String ip, String port, String name, int isDefeault) {
+        this.ip = ip;
+        this.port = port;
+        this.name = name;
+        this.isDefeault = isDefeault;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getIp() {

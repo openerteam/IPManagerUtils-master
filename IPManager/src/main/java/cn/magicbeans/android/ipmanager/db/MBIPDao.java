@@ -41,6 +41,7 @@ public class MBIPDao {
         ContentValues cv = new ContentValues();
         cv.put(MBIPContant.IP, ipInfo.ip);
         cv.put(MBIPContant.PORT, ipInfo.port);
+        cv.put(MBIPContant.NAME, ipInfo.name);
         cv.put(MBIPContant.IS_DEFEAULT, ipInfo.isDefeault);
         db.insert(MBIPContant.TABLE_NAME, null, cv);
         db.close();
@@ -57,6 +58,7 @@ public class MBIPDao {
         ContentValues cv = new ContentValues();
         cv.put(MBIPContant.IP, ipInfo.ip);
         cv.put(MBIPContant.PORT, ipInfo.port);
+        cv.put(MBIPContant.NAME, ipInfo.name);
         cv.put(MBIPContant.IS_DEFEAULT, ipInfo.isDefeault);
         db.update(MBIPContant.TABLE_NAME, cv, MBIPContant.IP + " =? and " + MBIPContant.PORT + " =?", new String[]{oldipInfo.ip, oldipInfo.port});
         db.close();
@@ -72,6 +74,7 @@ public class MBIPDao {
         ContentValues cv = new ContentValues();
         cv.put(MBIPContant.IP, ipInfo.ip);
         cv.put(MBIPContant.PORT, ipInfo.port);
+        cv.put(MBIPContant.NAME, ipInfo.name);
         cv.put(MBIPContant.IS_DEFEAULT, ipInfo.isDefeault==0?1:0);
         db.update(MBIPContant.TABLE_NAME, cv, MBIPContant.IP + " =? and " + MBIPContant.PORT + "=?", new String[]{ipInfo.ip,ipInfo.port});
         db.close();
@@ -86,6 +89,7 @@ public class MBIPDao {
         ContentValues cv = new ContentValues();
         cv.put(MBIPContant.IP, ipInfo.ip);
         cv.put(MBIPContant.PORT, ipInfo.port);
+        cv.put(MBIPContant.NAME, ipInfo.name);
         cv.put(MBIPContant.IS_DEFEAULT, 1);
         db.update(MBIPContant.TABLE_NAME, cv, MBIPContant.IP + " =? and " + MBIPContant.PORT + "=?", new String[]{ipInfo.ip,ipInfo.port});
         db.close();
@@ -100,6 +104,7 @@ public class MBIPDao {
         ContentValues cv = new ContentValues();
         cv.put(MBIPContant.IP, ipInfo.ip);
         cv.put(MBIPContant.PORT, ipInfo.port);
+        cv.put(MBIPContant.NAME, ipInfo.name);
         cv.put(MBIPContant.IS_DEFEAULT, 0);
         db.update(MBIPContant.TABLE_NAME, cv, MBIPContant.IP + " =? and " + MBIPContant.PORT + "=?", new String[]{ipInfo.ip,ipInfo.port});
         db.close();
@@ -132,8 +137,9 @@ public class MBIPDao {
         while (cursor.moveToNext()) {
             String ip = cursor.getString(cursor.getColumnIndex(MBIPContant.IP));
             String port = cursor.getString(cursor.getColumnIndex(MBIPContant.PORT));
+            String name = cursor.getString(cursor.getColumnIndex(MBIPContant.NAME));
             int isdefeault = cursor.getInt(cursor.getColumnIndex(MBIPContant.IS_DEFEAULT));
-            MBIPInfo info = new MBIPInfo(ip, port, isdefeault);
+            MBIPInfo info = new MBIPInfo(ip, port, name, isdefeault);
             infos.add(info);
         }
         cursor.close();
@@ -157,9 +163,10 @@ public class MBIPDao {
         while (cursor.moveToNext()) {
             String ip = cursor.getString(cursor.getColumnIndex(MBIPContant.IP));
             String port = cursor.getString(cursor.getColumnIndex(MBIPContant.PORT));
+            String name = cursor.getString(cursor.getColumnIndex(MBIPContant.NAME));
             int isdefeault = cursor.getInt(cursor.getColumnIndex(MBIPContant.IS_DEFEAULT));
             if (isdefeault == 1) {
-                info = new MBIPInfo(ip, port, isdefeault);
+                info = new MBIPInfo(ip, port, name, isdefeault);
                 break;
             }
         }

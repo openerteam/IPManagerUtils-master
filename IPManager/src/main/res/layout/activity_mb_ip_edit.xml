@@ -1,0 +1,398 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mb_white"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:id="@+id/mb_edit_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/mb_back" />
+
+
+        <ImageView
+            android:id="@+id/mb_finish_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/mb_finish"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mb_ip_content_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mb_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/mb_gray"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:text="@string/mb_ip_way"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/mb_white"
+                android:text="@string/mb_add_ip_tip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/mb_sub_gray"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/mb_name_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="3dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="@color/mb_gray"
+                android:textColorHint="@color/mb_line"
+                android:hint="@string/mb_name_hint"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/mb_line"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/mb_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_ip_et1"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@+id/mb_ip_et2"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_sub_gray"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/mb_ip_line_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="6px"
+                    android:layout_height="6px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/mb_point" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_ip_et2"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@+id/mb_ip_et3"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_sub_gray"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/mb_ip_line_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="6px"
+                    android:layout_height="6px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/mb_point" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_ip_et3"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@+id/mb_ip_et4"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_sub_gray"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/mb_ip_line_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="6px"
+                    android:layout_height="6px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/mb_point" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_ip_et4"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@+id/mb_port_et"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_sub_gray"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/mb_ip_line_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/mb_sub_gray"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_port_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_sub_gray"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:id="@+id/mb_ip_line_port"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mb_domain_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_domain_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="5dp"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@+id/mb_domain_port_et"
+                        android:inputType="textUri"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_999999"
+                        android:textSize="14sp"
+                        android:hint="@string/mb_domain_hint"/>
+
+                    <View
+                        android:id="@+id/mb_domain_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/mb_sub_gray"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mb_domain_port_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/mb_gray"
+                        android:textColorHint="@color/mb_999999"
+                        android:textSize="14sp"
+                        android:hint="0000"/>
+
+                    <View
+                        android:id="@+id/mb_domain_line_port"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/mb_line"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mb_commit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/mb_commit_bg"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/mb_white"
+                android:text="@string/mb_add_commit_text"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mb_ip_switch_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/mb_switch"
+            android:drawablePadding="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/mb_blue"
+            android:text="@string/mb_switch_text"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -54,6 +54,7 @@ public class MBDBHelper extends SQLiteOpenHelper {
                 "(id integer primary key autoincrement," +
                 MBIPContant.IP + " text," +
                 MBIPContant.PORT + " text," +
+                MBIPContant.NAME + " text," +
                 MBIPContant.IS_DEFEAULT + " interger)";
 
         db.execSQL(sql);

@@ -7,6 +7,8 @@ public class MBIPContant {
 
     public static  int  REQUEST_CODE = 2000;
 
+    public static  int  REQUEST_INFO = 3000;
+
     /**
      * 数据库名
      */
@@ -30,6 +32,11 @@ public class MBIPContant {
      * 端口
      */
     public final static  String  PORT = "port";
+
+    /**
+     * name
+     */
+    public final static  String  NAME = "name";
 
     /**
      * 是否为默认IP

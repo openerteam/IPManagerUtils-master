@@ -13,6 +13,7 @@ import android.os.Vibrator;
 
 import java.lang.ref.SoftReference;
 
+import cn.magicbeans.android.ipmanager.module.MBIPInfo;
 import cn.magicbeans.android.ipmanager.ui.MBIPActivity;
 
 /**
@@ -36,6 +37,10 @@ public class MBShakeUtils implements SensorEventListener {
 
     private int mShakeCount;
 
+    private String ip;
+    private String port;
+    private String name;
+
     private static MBShakeUtils mbShakeUtils;
 
     public static MBShakeUtils getInstance(Activity activity) {
@@ -52,8 +57,10 @@ public class MBShakeUtils implements SensorEventListener {
 
     }
 
-    public void init() {
-
+    public void init(String ip, String port, String name) {
+        this.ip = ip;
+        this.port = port;
+        this.name = name;
         mVibrator = (Vibrator) reference.get().getSystemService(Context.VIBRATOR_SERVICE);
         //获取 SensorManager 负责管理传感器
         mSensorManager = ((SensorManager) reference.get().getSystemService(Context.SENSOR_SERVICE));
@@ -129,6 +136,10 @@ public class MBShakeUtils implements SensorEventListener {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        if (MBIPUtils.getInstance(reference.get()).getIPPort() == null) {
+                            MBIPInfo info = new MBIPInfo(ip, port, name, 1);
+                            MBIPUtils.getInstance(reference.get()).insertIPPort(info);
+                        }
                         reset();
                         Intent intent = new Intent(reference.get(), MBIPActivity.class);
                         reference.get().startActivityForResult(intent, MBIPContant.REQUEST_CODE);

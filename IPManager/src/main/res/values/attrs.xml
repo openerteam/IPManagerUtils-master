@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MBSwipeLayout">
+        <attr name="preview" format="enum">
+            <enum name="noPreview" value="-1"/>
+            <enum name="openLeft" value="0"/>
+            <enum name="openRight" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

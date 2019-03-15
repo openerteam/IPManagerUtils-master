@@ -9,4 +9,20 @@
     <string name="mb_cancel">取消</string>
     <string name="mb_submit">确定</string>
     <string name="mb_alert_title">确定删除此条记录？</string>
+    <string name="mb_ip_way">IP方式</string>
+    <string name="mb_domain_way">域名方式</string>
+    <string name="mb_current_ip">当前连接</string>
+    <string name="mb_see_native_information">查看本机信息</string>
+    <string name="mb_available_ips">可用连接</string>
+    <string name="mb_add_ip_tip">手动添加，连接新的服务器</string>
+    <string name="mb_name_hint">请输入服务器名称（选填）</string>
+    <string name="mb_domain_hint">www.baidu.com</string>
+    <string name="mb_add_commit_text">添加</string>
+    <string name="mb_switch_text">域名方式</string>
+    <string name="mb_phone_resolution_ratio_text">手机分辨率</string>
+    <string name="mb_phone_type_text">手机型号</string>
+    <string name="mb_app_version_name_text">当前APP版本</string>
+    <string name="mb_system_version_name_text">系统版本</string>
+    <string name="mb_native_info">本机信息</string>
+    <string name="mb_ip_setting">IP设置</string>
 </resources>
