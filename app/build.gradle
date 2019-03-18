@@ -11,8 +11,8 @@ android {
         applicationId "com.ipmanager.utils"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 11
-        versionName "1.1.0"
+        versionCode 13
+        versionName "1.1.2"
     }
 
     buildTypes {

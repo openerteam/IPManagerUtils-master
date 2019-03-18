@@ -20,13 +20,13 @@
 - Step 2. Add the dependency：
 ```
   dependencies {
-	   implementation 'com.github.BartonL:IPManagerUtils:v1.1.0'
+	   implementation 'com.github.openerteam:IPManagerUtils-master:1.1.2'
 	}
 ```
 ------
 > 分割线----装逼失败
 
-## Version 1.1.0
+## Version 1.1.2
 - 支持添加域名
 - 优化IP输入
 
